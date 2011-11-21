@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <%= link_to post.title, url_for(:posts, :show, :id => post) %>
+  <%= time_ago_in_words(post.created_at || Time.now) + ' ago' %>
+  <%= simple_format(post.body) %>
+<% end %>

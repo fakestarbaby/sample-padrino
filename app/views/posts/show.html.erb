@@ -1,0 +1,5 @@
+<%= @post.title %>
+<%= time_ago_in_words(@post.created_at || Time.now) + ' ago' %>
+<%= simple_format(@post.body) %>
+
+<%= link_to "View all posts", url_for(:posts, :index) %>
