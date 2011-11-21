@@ -30,7 +30,9 @@ gem 'padrino', '0.10.5'
 #   gem 'padrino-' + g, '0.10.5'
 # end
 
-gem 'heroku'
+group :development do
+  gem 'heroku'
+end
 
 group :production do
   gem 'pg'
